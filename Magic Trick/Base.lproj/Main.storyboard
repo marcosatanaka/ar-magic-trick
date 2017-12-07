@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Magic_Trick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mOf-I1-vqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VP-8o-Fba">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yb1-OI-iTe" appends="YES" id="FLG-Ma-VC1"/>
+                                </connections>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eR4-xx-3Dp">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-Ml-bmU">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Magic!"/>
+                                        <connections>
+                                            <action selector="touchedMagic:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Ho-iI-XsD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spK-9x-gDh">
+                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Throw Ball"/>
+                                        <connections>
+                                            <action selector="touchedThrowBall:" destination="BV1-FR-VrT" eventType="touchUpInside" id="VI1-l5-kik"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xzh-xJ-n4d"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move your device for detecting a plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7v-tU-9SQ">
+                                <rect key="frame" x="16" y="323.5" width="343" height="20.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eR4-xx-3Dp" firstAttribute="top" secondItem="g7v-tU-9SQ" secondAttribute="bottom" constant="253" id="4V7-vo-5bO"/>
+                            <constraint firstItem="shl-P6-9de" firstAttribute="trailing" secondItem="eR4-xx-3Dp" secondAttribute="trailing" constant="16" id="DzS-Tw-JDG"/>
+                            <constraint firstItem="shl-P6-9de" firstAttribute="bottom" secondItem="eR4-xx-3Dp" secondAttribute="bottom" constant="20" id="EYJ-xb-e1S"/>
+                            <constraint firstItem="eR4-xx-3Dp" firstAttribute="leading" secondItem="shl-P6-9de" secondAttribute="leading" constant="16" id="Kkx-Yg-9qC"/>
+                            <constraint firstItem="6VP-8o-Fba" firstAttribute="leading" secondItem="shl-P6-9de" secondAttribute="leading" id="T0W-UN-Lef"/>
+                            <constraint firstItem="6VP-8o-Fba" firstAttribute="bottom" secondItem="shl-P6-9de" secondAttribute="bottom" id="Tec-sE-duj"/>
+                            <constraint firstItem="6VP-8o-Fba" firstAttribute="top" secondItem="mOf-I1-vqf" secondAttribute="top" id="Uy2-BT-7uV"/>
+                            <constraint firstItem="g7v-tU-9SQ" firstAttribute="leading" secondItem="shl-P6-9de" secondAttribute="leading" constant="16" id="d4f-VO-OvK"/>
+                            <constraint firstItem="shl-P6-9de" firstAttribute="trailing" secondItem="g7v-tU-9SQ" secondAttribute="trailing" constant="16" id="nOz-7W-dnc"/>
+                            <constraint firstItem="6VP-8o-Fba" firstAttribute="trailing" secondItem="shl-P6-9de" secondAttribute="trailing" id="uz5-iE-XUh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="shl-P6-9de"/>
+                    </view>
+                    <connections>
+                        <outlet property="guideLabel" destination="g7v-tU-9SQ" id="mj7-eS-fbv"/>
+                        <outlet property="magicButton" destination="k5e-Ml-bmU" id="rht-FK-owz"/>
+                        <outlet property="sceneView" destination="6VP-8o-Fba" id="x2a-1w-LKw"/>
+                        <outlet property="throwBallButton" destination="spK-9x-gDh" id="OVh-dh-sn9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yb1-OI-iTe">
+                    <connections>
+                        <action selector="tapDebug:" destination="BV1-FR-VrT" id="G1A-ac-gEG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
