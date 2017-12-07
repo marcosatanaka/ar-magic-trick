@@ -26,3 +26,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 * [Magic's sound effect](https://freesound.org/people/Robinhood76/sounds/342432/) - Robinhood76
 * [Ball toss sound effect](https://freesound.org/people/Connersaw64/sounds/199823/) - Connersaw64
+* [SCNNode point inside test](https://stackoverflow.com/questions/46057171/scnnode-point-inside-test) - Benjohn
