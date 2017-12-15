@@ -36,6 +36,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration: ARConfiguration
         
+        // Check the number of degrees of freedom available on the device
         if ARWorldTrackingConfiguration.isSupported {
             configuration = ARWorldTrackingConfiguration()
             (configuration as! ARWorldTrackingConfiguration).planeDetection = .horizontal
@@ -58,25 +59,33 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - Actions
     
     @IBAction func touchedThrowBall(_ sender: UIButton) {
+        // Instantiate a ball, put it in front of camera and throw it forward
         let ballNode = Ball()
         ballNode.applyTransformation(camera: sceneView.session.currentFrame?.camera)
         sceneView.scene.rootNode.addChildNode(ballNode)
         ballNode.applyForce(camera: sceneView.session.currentFrame?.camera)
         
+        // Play a sound to the thrown ball
         ballNode.runAction(SCNAction.playAudio(throwSound, waitForCompletion: false))
         balls.append(ballNode)
     }
 
     @IBAction func touchedMagic(_ sender: UIButton) {
+        // Add a particle effect
         let sparkles = SCNParticleSystem(named: "Sparkles", inDirectory: nil)!
         hat?.addParticleSystem(sparkles)
+        
+        // Hide the balls that are inside the hat
         balls.filter { $0.inside(hat: hat) }
-             .forEach { $0.removeFromParentNode() }
+             .forEach { $0.isHidden = !$0.isHidden }
+        
+        // Play magic sound and, when finished, removes the particle effect
         hat?.runAction(SCNAction.playAudio(magicSound, waitForCompletion: true)) {
             self.hat?.removeParticleSystem(sparkles)
         }
     }
     
+    // Hiding/showing debug information
     @IBAction func tapDebug(_ sender: Any) {
         if sceneView.debugOptions.isEmpty {
             sceneView.debugOptions = [.showPhysicsShapes]
@@ -118,6 +127,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        // Adjust light intensity accordingly to the ambient light
         if let lightEstimate = sceneView.session.currentFrame?.lightEstimate {
             sceneView.scene.rootNode.childNode(withName: "omni", recursively: true)?.light?.intensity = lightEstimate.ambientIntensity
         }

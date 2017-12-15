@@ -11,7 +11,10 @@ To run this project, you will need:
 
 ### How to use
 
-Open the project using Xcode and deploy it onto your device.
+1. Open the project using Xcode and deploy it onto your device.
+2. Open the app, point to a plane and gently move your device for it to detect the plane.
+3. Once a plane was detected, a hat will be placed on it. Press the button throw ball to throw balls :open_mouth:. Try to throw balls inside the hat.
+4. Once there's some balls on the hat, press the button Magic! to make the balls disapear! Press it again to make the balls appear again.
 
 ### Built With
 
