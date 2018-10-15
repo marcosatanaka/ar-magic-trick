@@ -6,7 +6,7 @@ A ball toss game built using Apple's augmented reality framework, ARKit. [Demo](
 
 To run this project, you will need:
 
-* Xcode 9
+* Xcode 10
 * iOS device with A9 processor or newer
 
 ### How to use
@@ -19,7 +19,7 @@ To run this project, you will need:
 ### Built With
 
 * [ARKit](https://developer.apple.com/arkit/) - augmented reality framework
-* [Swift 4](https://developer.apple.com/swift/) - programming language
+* [Swift 4.2](https://developer.apple.com/swift/) - programming language
 
 ### License
 
