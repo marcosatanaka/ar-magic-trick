@@ -48,9 +48,9 @@
 		B125355C1FD35E3F0035241B = {
 			isa = PBXGroup;
 			children = (
+				B12535671FD35E3F0035241B /* Magic Trick */,
 				B1BDA1751FD4699B00F8C5B8 /* spark.png */,
 				B1BDA1761FD4699B00F8C5B8 /* Sparkles.scnp */,
-				B12535671FD35E3F0035241B /* Magic Trick */,
 				B12535661FD35E3F0035241B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,14 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				B12535681FD35E3F0035241B /* AppDelegate.swift */,
-				B125356A1FD35E3F0035241B /* art.scnassets */,
 				B125356C1FD35E3F0035241B /* ViewController.swift */,
 				B19517051FD3A1F200726540 /* Ball.swift */,
 				B14D6B731FD8B9C100B6B8C0 /* SCNVector3.swift */,
 				B125356E1FD35E3F0035241B /* Main.storyboard */,
-				B12535711FD35E3F0035241B /* Assets.xcassets */,
 				B12535731FD35E3F0035241B /* LaunchScreen.storyboard */,
 				B12535761FD35E3F0035241B /* Info.plist */,
+				B125356A1FD35E3F0035241B /* art.scnassets */,
+				B12535711FD35E3F0035241B /* Assets.xcassets */,
 			);
 			path = "Magic Trick";
 			sourceTree = "<group>";
@@ -89,6 +89,7 @@
 				B12535611FD35E3F0035241B /* Sources */,
 				B12535621FD35E3F0035241B /* Frameworks */,
 				B12535631FD35E3F0035241B /* Resources */,
+				76C16297217517440054E48C /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -106,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Marcos Tanaka";
 				TargetAttributes = {
 					B12535641FD35E3F0035241B = {
@@ -148,6 +149,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76C16297217517440054E48C /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B12535611FD35E3F0035241B /* Sources */ = {
@@ -197,6 +219,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -204,6 +227,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -254,6 +278,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -261,6 +286,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
